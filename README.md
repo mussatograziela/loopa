@@ -4,7 +4,7 @@
 
 **Loopa** is a front-end prototype for people who create with yarn — including crochet, knitting, and amigurumi makers. It brings project tracking, row counting, materials, and pattern notes together in a light, welcoming experience.
 
-![Loopa welcome screen](assets/welcome-preview.html.png)
+![Loopa welcome screen](assets/welcome-preview.png)
 
 ## Key features
 
