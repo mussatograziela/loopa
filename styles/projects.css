@@ -56,14 +56,14 @@ body {
 }
 
 .mini-logo {
-  width:130px;
-  height:50px;
+  width:42px;
+  height:42px;
   overflow:hidden;
   border-radius:10px;
 }
 
 .mini-logo img {
-  width:130px;
+  width: 42px;
   mix-blend-mode:multiply;
 }
 
