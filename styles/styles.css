@@ -1,0 +1,370 @@
+@import url(index.css);
+
+:root {
+  --ink: #32126f;
+  --ink-deep: #24104f;
+  --pink: #fa70b4;
+  --lavender: #a46bfa;
+  --mist: #f7f3ff;
+  --white: #fff;
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ece7fa;
+}
+
+button, a { 
+  font: inherit; 
+}
+button { 
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  max-width: 480px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  box-shadow: 0 0 50px rgba(44, 18, 98, .12);
+}
+
+.hero {
+  position: relative;
+  min-height: 68vh;
+  padding: 34px 27px 43px;
+  overflow: hidden;
+  color: var(--white);
+  background: linear-gradient(151deg, #2d106a 0%, #4b1a9a 46%, #8052da 100%);
+}
+
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  filter: blur(3px);
+  opacity: .48;
+}
+
+.hero::before {
+  top: -175px; 
+  left: -120px; 
+  background: #e16bd0;
+}
+
+.hero::after {
+  right: -170px; 
+  bottom: 105px; 
+  background: #5e8cff;
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+  width: 194px;
+  height: 72px;
+  margin: -10px auto 0;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.brand img {
+  display: block;
+  width: 194px;
+  max-width: none;
+  height: auto;
+  transform: translateY(0);
+  mix-blend-mode: multiply;
+}
+
+.yarn-illustration {
+  position: relative; z-index: 1; width: 288px; height: 223px; margin: 7px auto 8px;
+}
+
+.yarn-ball {
+  position: absolute; 
+  width: 132px; 
+  height: 132px; 
+  border: 5px solid rgba(255,255,255,.65); 
+  border-radius: 50%; 
+  box-shadow: inset 0 0 0 11px rgba(255,255,255,.12), 0 16px 28px rgba(29, 8, 83, .2);
+}
+
+.yarn-ball::before, .yarn-ball::after {
+  content: ""; 
+  position: absolute; 
+  inset: 19px -4px; 
+  border: 4px solid rgba(255,255,255,.7); 
+  border-left-color: transparent; 
+  border-right-color: transparent; 
+  border-radius: 50%; 
+  transform: rotate(-32deg);
+}
+
+.yarn-ball::after {
+  inset: 37px -2px; 
+  transform: rotate(43deg);
+}
+
+.ball-pink { 
+  left: 12px;
+  top: 42px; 
+  background: linear-gradient(135deg, #f661b1, #a84bd3);
+}
+
+.ball-lilac {
+  right: 12px;
+  top: 36px; 
+  background: linear-gradient(135deg, #bd72f5, #5578f7);
+}
+
+.thread {
+  position: absolute; 
+  z-index: -1; 
+  height: 68px; 
+  border: 5px solid #ffc2e4; 
+  border-top: 0; 
+  border-radius: 0 0 50% 50%;
+}
+
+.thread-one { 
+  width: 166px; 
+  left: 39px; 
+  top: 150px; 
+  transform: rotate(11deg);
+}
+
+.thread-two { 
+  width: 174px; 
+  right: 19px; 
+  top: 154px; 
+  border-color: #d7c1ff; 
+  transform: rotate(-11deg);
+}
+
+.needle { 
+  position: absolute; 
+  right: 45px; 
+  top: 0; 
+  width: 7px; 
+  height: 119px; 
+  border-radius: 10px; 
+  background: linear-gradient(#ffd0e9, #f57ab7); 
+  transform: rotate(14deg);
+}
+
+.needle::after { 
+  content: ""; 
+  position: absolute; 
+  left: -4px; 
+  top: -4px; 
+  width: 10px; 
+  height: 22px; 
+  border: 4px solid #ffd0e9; 
+  border-bottom: 0; 
+  border-radius: 50%;
+}
+
+.heart {
+  position: absolute; 
+  right: 9px; 
+  bottom: 12px;
+  color: #ffb4dc; 
+  font-size: 49px; 
+  transform: rotate(-13deg); 
+  text-shadow: 0 4px 12px rgba(40, 11, 102, .2);
+}
+
+.copy { 
+  position: relative; 
+  z-index: 1; 
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px; 
+  color: #ffc4e4; 
+  font-size: 12px; 
+  font-weight: 700; 
+  letter-spacing: 1.7px; 
+  text-transform: uppercase; 
+}
+
+h1 {
+  max-width: 375px; 
+  margin: 0 auto; 
+  font-family: "Nunito", sans-serif; 
+  font-size: clamp(31px, 8.4vw, 40px); 
+  line-height: 1.06; 
+  letter-spacing: -1.25px; 
+}
+
+.subtitle { 
+  max-width: 355px; 
+  margin: 16px auto 0; 
+  color: rgba(255,255,255,.84); 
+  font-size: 15px; 
+  line-height: 1.5; 
+}
+
+.actions { 
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  padding: 26px 27px 22px; 
+  gap: 12px; 
+}
+
+.button { 
+  min-height: 54px; 
+  border: 0; 
+  border-radius: 16px; 
+  font-weight: 700; 
+  transition: transform .18s ease, box-shadow .18s ease; 
+}
+
+.button:hover { 
+  transform: translateY(-2px); 
+}
+
+.button:focus-visible, a:focus-visible { 
+  outline: 3px solid #f59bc9; 
+  outline-offset: 3px; 
+}
+
+.button-primary { 
+  color: #fff; 
+  background: linear-gradient(98deg, #ed5fac, #8d55eb); 
+  box-shadow: 0 10px 20px rgba(129, 53, 194, .27); 
+}
+
+.button-primary span { 
+  margin-left: 10px; 
+  font-size: 19px; 
+}
+
+.button-secondary { 
+  color: var(--ink); 
+  background: #f5efff; 
+  border: 1px solid #e4d8fb; 
+}
+
+.terms { 
+  margin: 8px 10px 0; 
+  color: #897ca5; 
+  font-size: 11px; 
+  line-height: 1.5; 
+  text-align: center; 
+}
+
+.terms a { 
+  color: #6f43b7; 
+  text-decoration: underline; 
+}
+
+.welcome-dialog { 
+  width: min(88vw, 370px); 
+  border: 0; 
+  border-radius: 26px; 
+  padding: 33px 27px 27px; 
+  color: var(--ink); 
+  text-align: center; 
+  box-shadow: 0 22px 70px rgba(25, 8, 65, .3); 
+}
+
+.welcome-dialog::backdrop { 
+  background: rgba(35, 13, 78, .57); 
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.welcome-dialog h2 { 
+  margin: 0; 
+  font-family: "Nunito", sans-serif; 
+  font-size: 27px; 
+}
+
+.welcome-dialog p:not(.eyebrow) { 
+  color: #716484; 
+  line-height: 1.5; 
+}
+
+.welcome-dialog .eyebrow { 
+  color: #b654a7; 
+  margin-top: 7px; 
+}
+
+.dialog-icon { 
+  margin: 0 auto 10px; 
+  width: 55px; 
+  height: 55px; 
+  display: grid; 
+  place-items: center; 
+  border-radius: 18px; 
+  color: #fff; 
+  font-size: 26px; 
+  background: linear-gradient(135deg, #f16bac, #9261ed); 
+}
+
+.close-dialog { 
+  position: absolute; 
+  top: 11px; 
+  right: 15px; 
+  border: 0; 
+  color: #786c91; 
+  background: transparent; 
+  font-size: 27px; 
+}
+
+.close-cta { 
+  width: 100%; 
+  margin-top: 11px; 
+}
+
+@media (min-width: 600px) {
+  body { 
+    display: grid; 
+    place-items: center; 
+    padding: 24px; 
+  }
+
+  .app-shell { 
+    min-height: 760px; 
+    border-radius: 28px; 
+  }
+}
+
+@media (max-height: 700px) and (max-width: 599px) {
+  .hero { 
+    min-height: 61vh; 
+    padding-top: 25px; 
+    padding-bottom: 24px; 
+  }
+
+  .yarn-illustration { 
+    transform: scale(.82); 
+    height: 194px; 
+    margin: 7px auto -4px; 
+  }
+
+  .subtitle { 
+    margin-top: 11px; 
+  }
+
+  .actions { 
+    padding-top: 18px; 
+  }
+}

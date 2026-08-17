@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar — Loopa</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <main class="login-page">
+      <a href="index.html" class="back-link" aria-label="Voltar para a página inicial">‹</a>
+
+      <div class="brand" aria-label="Loopa">
+        <img src="assets/logomarca-loopa.png" alt="" />
+      </div>
+
+      <section class="login-card" aria-labelledby="login-title">
+
+        <p class="eyebrow">SEU CANTINHO CRIATIVO</p>
+
+        <h1 id="login-title">Que bom te ver por aqui!</h1>
+
+        <p class="intro">Entre para continuar suas criações e acompanhar cada laçada.</p>
+        
+        <form id="login-form">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="voce@email.com" autocomplete="email" required />
+          <label for="password">Senha</label>
+
+          <div class="password-field">
+            <input id="password" name="password" type="password" placeholder="Sua senha" autocomplete="current-password" required />
+            
+            <button type="button" id="toggle-password" aria-label="Mostrar senha">◉</button>
+          </div>
+
+          <a class="forgot-link" href="#recuperar">Esqueci minha senha</a>
+
+          <button class="submit-button" type="submit">Entrar <span>→</span></button>
+
+        </form>
+
+        <p class="new-account">Ainda não tem uma conta? 
+          <a href="#cadastro" id="create-account">Criar conta</a>
+        </p>
+
+      </section>
+      
+      <p class="message" id="message" role="status"></p>
+    </main>
+    <script src="login.js"></script>
+  </body>
+</html>

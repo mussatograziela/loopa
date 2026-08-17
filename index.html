@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loopa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="titulo-principal">
+        <div class="brand" aria-label="Loopa — Onde cada laçada conecta uma história">
+          <img src="assets/logomarca-loopa.png" alt="" />
+        </div>
+
+        <div class="yarn-illustration" aria-hidden="true">
+          <span class="thread thread-one"></span>
+          <span class="thread thread-two"></span>
+          <span class="yarn-ball ball-pink"></span>
+          <span class="yarn-ball ball-lilac"></span>
+          <span class="needle"></span>
+          <span class="heart">♥</span>
+        </div>
+
+        <div class="copy">
+          <p class="eyebrow">Sua comunidade criativa</p>
+          <h1 id="titulo-principal">Crie, compartilhe e conecte histórias.</h1>
+          <p class="subtitle">Um espaço feito para quem encontra carinho em cada ponto, cada fio e cada nova  criação.
+          </p>
+        </div>
+
+      </section>
+
+      <section class="actions" aria-label="Acesso ao Loopa">
+        <button class="button button-primary" type="button" data-action="signup">Começar agora <span aria-hidden="true">→</span></button>
+        <button class="button button-secondary" type="button" data-action="login">Já tenho uma conta</button>
+        <p class="terms">Ao continuar, você concorda com nossos <a href="#termos">Termos de uso</a> e <a href="#privacidade">Política de privacidade</a>.</p>
+      </section>
+
+    </main>
+
+    <dialog class="welcome-dialog" aria-labelledby="dialog-title">
+      <button class="close-dialog" aria-label="Fechar">×</button>
+
+      <div class="dialog-icon">♥</div>
+      <p class="eyebrow" id="dialog-label">LOOPA</p>
+
+      <h2 id="dialog-title">Que bom ter você aqui!</h2>
+
+      <p id="dialog-text"></p>
+
+      <button class="button button-primary close-cta" type="button">Continuar</button>
+      
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>

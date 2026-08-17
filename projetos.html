@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus projetos — Loopa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <main class="phone" aria-label="Loopa">
+
+      <section class="dashboard view is-active" aria-label="Seus projetos">
+
+        <header class="topbar">
+
+          <a class="mini-logo" href="index.html" aria-label="Ir para início">
+            <img src="logomarca-loopa.png" alt="Loopa" />
+          </a>
+          <button class="icon-button" id="sync-status" aria-label="Ver status de sincronização">⌁</button>
+
+        </header>
+
+        <div class="heading">
+          <p>Meu ateliê</p>
+          <h1>Seus projetos</h1>
+        </div>
+
+        <div class="project-list" id="project-list"></div>
+
+        <button class="new-project" id="open-form">
+          <span>＋</span> Novo projeto
+        </button>
+
+      </section>
+
+      <section class="project-view view" aria-label="Detalhes do projeto">
+
+        <header class="project-topbar">
+
+          <button class="icon-button" id="back-to-list" aria-label="Voltar">‹</button>
+
+          <div>
+            <p id="project-type">Projeto em andamento</p>
+            <h1 id="project-name">Projeto</h1>
+          </div>
+
+          <button class="icon-button" aria-label="Mais opções">•••</button>
+
+        </header>
+        <nav class="tabs" aria-label="Seções do projeto">
+
+          <button class="is-selected" data-tab="counter">Contador</button>
+          <button data-tab="recipe">Receita</button>
+          <button data-tab="info">Detalhes</button>
+
+        </nav>
+
+        <div class="tab-content">
+          <section class="tab is-visible" id="counter">
+
+            <div class="counter-circle">
+              <div>
+                <strong id="count">0</strong>
+                <span>carreiras</span><small id="total">de 0</small>
+              </div>
+            </div>
+
+            <p class="progress-note" id="progress-note">Cada ponto conta.</p>
+
+            <div class="counter-controls">
+              <button id="decrease" aria-label="Diminuir carreira">−</button>
+              <button id="increase" aria-label="Aumentar carreira">+</button>
+            </div>
+
+          </section>
+
+          <section class="tab detail-card" id="recipe">
+            <p class="detail-label">ANOTAÇÕES DA RECEITA</p>
+            <p id="recipe-text"></p>
+          </section>
+
+          <section class="tab detail-card" id="info">
+            <p class="detail-label">MATERIAIS</p>
+            <ul id="materials"></ul>
+          </section>
+
+        </div>
+      </section>
+
+      <div class="overlay" id="overlay"></div>
+      <form class="new-sheet" id="project-form">
+        <div class="handle"></div>
+
+        <h2>Nova laçada</h2>
+
+        <label>Nome do projeto
+          <input id="new-name" maxlength="42" placeholder="Ex.: Cardigã abraço" required />
+        </label>
+
+        <label>Total de carreiras <small>(opcional)</small>
+          <input id="new-total" type="number" min="0" placeholder="Ex.: 80" />
+        </label>
+
+        <p class="field-title">Cor do projeto</p>
+        
+        <div class="color-picker" id="color-picker"></div>
+
+        <div class="form-actions">
+          <button type="button" class="cancel" id="close-form">Cancelar</button>
+          <button type="submit" class="create">Criar projeto</button>
+        </div>
+        
+      </form>
+      <p class="toast" id="toast" role="status"></p>
+    </main>
+    <script src="projetos.js"></script>
+  </body>
+</html>
